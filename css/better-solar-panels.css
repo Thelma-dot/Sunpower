@@ -1,0 +1,280 @@
+/* Better Solar Panels page - scoped styles */
+
+/* Page header overrides to ensure readability */
+.page-header {
+    color: #ffffff;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-header .hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.page-header .hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page-header .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.55) 100%);
+    z-index: 2;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 3;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* Product hero */
+.product-hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.product-hero .hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.product-hero .hero-text h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.product-hero .hero-text p {
+    color: #000000;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.hero-features {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0 1.5rem;
+}
+
+.hero-features .feature-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    padding: 0.5rem 0.9rem;
+    color: #2E7D32;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.hero-features .feature-item i {
+    font-size: 0.95rem;
+}
+
+/* Features section */
+.features-section {
+    padding: 4rem 0 2rem;
+    background: #ffffff;
+}
+
+.features-section .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature-card {
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 14px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card .feature-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+.feature-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    color: #000000;
+}
+
+/* Specifications */
+.specifications {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.specifications .specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.spec-item {
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.spec-item h4 {
+    color: #2E7D32;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.spec-item p {
+    color: #111111;
+}
+
+/* CTA */
+.cta-section {
+    padding: 4rem 0;
+    background: var(--gradient-primary, linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%));
+    color: #ffffff;
+    position: relative;
+}
+
+.cta-section .cta-content {
+    text-align: center;
+}
+
+.cta-section .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Dark mode tweaks */
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .spec-item {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    box-shadow: 0 8px 24px var(--shadow-color);
+}
+
+[data-theme="dark"] .feature-card h3,
+[data-theme="dark"] .spec-item h4 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .feature-card p,
+[data-theme="dark"] .spec-item p {
+    color: var(--text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-header {
+        height: 50vh;
+        min-height: 300px;
+    }
+
+    .page-header h1 {
+        font-size: 2.25rem;
+    }
+
+    .product-hero .hero-text h2 {
+        font-size: 1.9rem;
+    }
+
+    .features-section .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .specifications .specs-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .cta-section .cta-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .cta-section .cta-buttons .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        height: 40vh;
+        min-height: 250px;
+    }
+
+    .page-header h1 {
+        font-size: 1.875rem;
+    }
+
+    .product-hero .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero-features .feature-item {
+        justify-content: center;
+    }
+}
