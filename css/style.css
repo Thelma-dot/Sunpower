@@ -4355,12 +4355,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem 0;
+    
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: white;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
+    border: white;
+    box-shadow: white;
     min-height: 300px;
 }
 
@@ -4410,4 +4410,9 @@ body {
     }
     
    
+}
+
+.testimonial-rating {
+    color: #ffc107;
+    font-size: 1.25rem;
 }
