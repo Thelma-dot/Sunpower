@@ -981,3 +981,5 @@ window.viewProduct = viewProduct;
 window.closeModal = closeModal;
 window.openServicesPopup = openServicesPopup;
 window.closeServicesPopup = closeServicesPopup;
+
+
