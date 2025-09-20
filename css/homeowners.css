@@ -119,6 +119,14 @@
     margin: 0 auto 1.5rem;
     color: white;
     font-size: 2rem;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+            
+            
+            
+           
 }
 
 .benefit-card h3 {

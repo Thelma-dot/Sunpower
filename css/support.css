@@ -483,7 +483,7 @@
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    background: var(--gradient-primary);
     color: white;
     padding: 4rem 0;
     text-align: center;

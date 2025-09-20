@@ -789,6 +789,10 @@ body {
     padding: 0.5rem;
 }
 
+.nav-item > .nav-link::after {
+            content: none;
+        }
+
 /* Hero Section */
 .hero {
     position: relative;
@@ -4381,38 +4385,3 @@ body {
 
 
 
-@keyframes pulse {
-    0% { 
-        transform: scale(1); 
-        box-shadow: 0 0 50px #FF8C00, 0 0 100px rgba(255, 140, 0, 0.5); 
-    }
-    100% { 
-        transform: scale(1.1); 
-        box-shadow: 0 0 70px #FF8C00, 0 0 120px rgba(255, 140, 0, 0.6); 
-    }
-}
-
-@media (max-width: 768px) {
-    .sponsor-image-container {
-        padding: 1.5rem;
-        min-height: 250px;
-    }
-    
-    
-}
-
-@media (max-width: 480px) {
-   
-    
-    .sponsor-image-container {
-        padding: 1rem;
-        min-height: 200px;
-    }
-    
-   
-}
-
-.testimonial-rating {
-    color: #ffc107;
-    font-size: 1.25rem;
-}
