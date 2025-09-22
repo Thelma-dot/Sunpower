@@ -479,8 +479,10 @@ function initializeAnimations() {
         });
     }, observerOptions);
 
-    // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.feature-item, .service-card, .testimonial-card, .about-card');
+    // Observe elements for animation (broadened for About page)
+    const animatedElements = document.querySelectorAll(
+        '.feature-item, .service-card, .testimonial-card, .about-card, .mv-card, .team-member, .stat-item, .story-content, .timeline-item, .award-card'
+    );
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
@@ -981,5 +983,8 @@ window.viewProduct = viewProduct;
 window.closeModal = closeModal;
 window.openServicesPopup = openServicesPopup;
 window.closeServicesPopup = closeServicesPopup;
+
+
+
 
 

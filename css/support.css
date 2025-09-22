@@ -195,12 +195,6 @@
     background: linear-gradient(135deg, rgba(75, 151, 192, 0.05) 0%, rgba(130, 209, 197, 0.05) 100%);
 }
 
-
-
-
-
-
-
 .knowledge-categories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -513,6 +507,152 @@
 .cta-content .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+/* ===== DARK MODE STYLES ===== */
+[data-theme="dark"] .support-options {
+    background: #0a0a0a;
+}
+
+[data-theme="dark"] .support-card {
+    background: #1a1a1a;
+    border-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .support-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .support-card h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .support-card p {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .detail-item {
+    border-bottom-color: #333;
+}
+
+[data-theme="dark"] .detail-label {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .detail-value {
+    color: #4CAF50;
+}
+
+[data-theme="dark"] .knowledge-base {
+    background: linear-gradient(135deg, rgba(75, 151, 192, 0.1) 0%, rgba(130, 209, 197, 0.1) 100%);
+}
+
+[data-theme="dark"] .category-card {
+    background: #1a1a1a;
+    border-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .category-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .category-card h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .category-card p {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .category-links a {
+    color: #4CAF50;
+}
+
+[data-theme="dark"] .category-links a:hover {
+    color: #66bb6a;
+}
+
+[data-theme="dark"] .faq-section {
+    background: #0a0a0a;
+}
+
+[data-theme="dark"] .faq-item {
+    background: #1a1a1a;
+    border-color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .faq-item:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .faq-question {
+    background: rgba(75, 151, 192, 0.1);
+}
+
+[data-theme="dark"] .faq-question:hover {
+    background: rgba(130, 209, 197, 0.15);
+}
+
+[data-theme="dark"] .faq-question h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .faq-question i {
+    color: #4CAF50;
+}
+
+[data-theme="dark"] .faq-answer p {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .warranty-section {
+    background: linear-gradient(135deg, rgba(75, 151, 192, 0.1) 0%, rgba(26, 26, 26, 0.9) 100%);
+}
+
+[data-theme="dark"] .warranty-text h2 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .warranty-text .lead {
+    color: #4CAF50;
+}
+
+[data-theme="dark"] .warranty-feature {
+    background: #1a1a1a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .warranty-feature:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .feature-content h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .feature-content p {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .warranty-card {
+    background: #1a1a1a;
+    border-color: #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .warranty-card h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .warranty-card p {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .warranty-steps li {
+    color: #cccccc;
 }
 
 /* Responsive Design */

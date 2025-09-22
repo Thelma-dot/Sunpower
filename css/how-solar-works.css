@@ -570,6 +570,54 @@
     color: #666;
 }
 
+/* Dark Mode Overrides */
+[data-theme="dark"] .page-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+[data-theme="dark"] .section-intro {
+    color: #b0b0b0;
+}
+
+[data-theme="dark"] .intro-section,
+[data-theme="dark"] .benefits-section,
+[data-theme="dark"] .steps-section,
+[data-theme="dark"] .faq-section {
+    background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+}
+
+[data-theme="dark"] .intro-text h2,
+[data-theme="dark"] .benefits-text h2,
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .faq-question h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .intro-text p,
+[data-theme="dark"] .benefits-text .lead,
+[data-theme="dark"] .benefit-content p,
+[data-theme="dark"] .step-content p,
+[data-theme="dark"] .faq-answer p {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .step-row,
+[data-theme="dark"] .benefit-item,
+[data-theme="dark"] .step-card,
+[data-theme="dark"] .faq-item {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .3);
+}
+
+[data-theme="dark"] .faq-question {
+    background: #222;
+}
+
+[data-theme="dark"] .faq-question:hover {
+    background: #2a2a2a;
+}
+
 .step-row {
     display: flex;
     align-items: center;

@@ -202,22 +202,82 @@
     flex-wrap: wrap;
 }
 
-/* Dark mode tweaks */
+/* ===== DARK MODE STYLES ===== */
+[data-theme="dark"] .product-hero {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+[data-theme="dark"] .product-hero .hero-text h2 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .product-hero .hero-text p {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .hero-features .feature-item {
+    background: #2d2d2d;
+    border-color: #404040;
+    color: #4CAF50;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .features-section {
+    background: #0a0a0a;
+}
+
+[data-theme="dark"] .feature-card {
+    background: #1a1a1a;
+    border-color: #333;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .feature-card:hover {
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .feature-card h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .feature-card p {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .specifications {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+[data-theme="dark"] .spec-item {
+    background: #1a1a1a;
+    border-color: #333;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .spec-item h4 {
+    color: #4CAF50;
+}
+
+[data-theme="dark"] .spec-item p {
+    color: #cccccc;
+}
+
+/* Enhanced dark mode tweaks for existing elements */
 [data-theme="dark"] .feature-card,
 [data-theme="dark"] .spec-item {
-    background: var(--card-bg);
-    border-color: var(--border-color);
-    box-shadow: 0 8px 24px var(--shadow-color);
+    background: #1a1a1a;
+    border-color: #333;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 [data-theme="dark"] .feature-card h3,
 [data-theme="dark"] .spec-item h4 {
-    color: var(--text-primary);
+    color: #ffffff;
 }
 
 [data-theme="dark"] .feature-card p,
 [data-theme="dark"] .spec-item p {
-    color: var(--text-secondary);
+    color: #cccccc;
 }
 
 /* Responsive */

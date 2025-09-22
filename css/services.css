@@ -173,6 +173,30 @@
     margin: 0 auto;
 }
 
+/* Dark Mode Overrides */
+[data-theme="dark"] .page-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+[data-theme="dark"] .all-services .container {
+    background: transparent;
+}
+
+[data-theme="dark"] .service-card-detailed {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .3);
+}
+
+[data-theme="dark"] .service-content h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .service-content,
+[data-theme="dark"] .service-features li {
+    color: #cccccc;
+}
+
 @media (max-width: 768px) {
     .all-services .container {
         padding: 1rem;

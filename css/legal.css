@@ -72,7 +72,7 @@
 }
 
 .hero-content p {
-     font-size: 1.25rem;
+    font-size: 1.25rem;
     opacity: 0.9;
     max-width: 600px;
     margin: 0 auto;
@@ -133,6 +133,45 @@
 
 .toc a:hover {
     color: #2E7D32;
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .page-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+[data-theme="dark"] .legal-content {
+    background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+}
+
+[data-theme="dark"] .toc,
+[data-theme="dark"] .contact-info {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .3);
+}
+
+[data-theme="dark"] .toc h3,
+[data-theme="dark"] .content h2,
+[data-theme="dark"] .content h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .content,
+[data-theme="dark"] .content p,
+[data-theme="dark"] .content li,
+[data-theme="dark"] .toc a,
+[data-theme="dark"] .contact-item span {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .content h2,
+[data-theme="dark"] .content {
+    border-color: #333;
+}
+
+[data-theme="dark"] .toc a:hover {
+    color: var(--solar-green-light);
 }
 
 /* Content */

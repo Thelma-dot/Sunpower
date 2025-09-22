@@ -1,3 +1,99 @@
+:root {
+    /* Light Mode */
+    --solar-green: #28a745;
+    --gradient-primary: linear-gradient(135deg, #28a745, #4caf50);
+    --gradient-accent: linear-gradient(135deg, #43a047, #2e7d32);
+
+    --background-color: #ffffff;
+    --section-bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-primary: #2c3e50;
+    --text-secondary: #6c757d;
+}
+
+/* Dark mode variables when body/html has data-theme="dark" */
+[data-theme="dark"] {
+    --solar-green: #66bb6a;
+    --gradient-primary: linear-gradient(135deg, #1e4620, #2e7d32);
+    --gradient-accent: linear-gradient(135deg, #388e3c, #1b5e20);
+
+    --background-color: #121212;
+    --section-bg: #1e1e1e;
+    --card-bg: #222222;
+    --text-primary: #f1f1f1;
+    --text-secondary: #bbbbbb;
+}
+
+
+body {
+    background: var(--background-color);
+    color: var(--text-primary);
+}
+
+.hero-benefits,
+.solar-solutions,
+.financing-options {
+    background: var(--section-bg);
+}
+
+.benefit-card,
+.solution-card,
+.financing-card,
+.testimonial-card {
+    background: var(--card-bg);
+    color: var(--text-primary);
+}
+
+.benefit-card p,
+.solution-features li,
+.financing-features li,
+.testimonial-text,
+.author-info p {
+    color: var(--text-secondary);
+}
+
+/* Dark Mode Structural Overrides */
+[data-theme="dark"] .page-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+[data-theme="dark"] .hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .hero-benefits,
+[data-theme="dark"] .solar-solutions,
+[data-theme="dark"] .financing-options,
+[data-theme="dark"] .why-solar,
+[data-theme="dark"] .customer-testimonials {
+    background: #121212;
+}
+
+[data-theme="dark"] .benefit-card,
+[data-theme="dark"] .solution-card,
+[data-theme="dark"] .financing-card,
+[data-theme="dark"] .testimonial-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .3);
+}
+
+[data-theme="dark"] .benefit-card h3,
+[data-theme="dark"] .solution-content h3,
+[data-theme="dark"] .benefit-content h3,
+[data-theme="dark"] .financing-card h3,
+[data-theme="dark"] .author-info h4 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .solution-features li,
+[data-theme="dark"] .benefit-card p,
+[data-theme="dark"] .benefit-content p,
+[data-theme="dark"] .testimonial-text {
+    color: #cccccc;
+}
+
+
 /* Homeowners Page Specific Styles */
 
 /* Page Header */
@@ -123,10 +219,10 @@
     top: -40px;
     left: 50%;
     transform: translateX(-50%);
-            
-            
-            
-           
+
+
+
+
 }
 
 .benefit-card h3 {

@@ -78,6 +78,49 @@
     margin: 0 auto;
 }
 
+/* Dark Mode Overrides */
+[data-theme="dark"] .page-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+[data-theme="dark"] .hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] .process-overview,
+[data-theme="dark"] .installation-team,
+[data-theme="dark"] .installation-gallery,
+[data-theme="dark"] .quality-assurance {
+    background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+}
+
+[data-theme="dark"] .timeline-content,
+[data-theme="dark"] .team-member,
+[data-theme="dark"] .gallery-item,
+[data-theme="dark"] .quality-feature,
+[data-theme="dark"] .warranty-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .3);
+}
+
+[data-theme="dark"] .timeline-content h3,
+[data-theme="dark"] .team-member h3,
+[data-theme="dark"] .gallery-item h3,
+[data-theme="dark"] .feature-content h3,
+[data-theme="dark"] .warranty-card h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .timeline-content p,
+[data-theme="dark"] .timeline-features li,
+[data-theme="dark"] .team-member p,
+[data-theme="dark"] .gallery-item p,
+[data-theme="dark"] .feature-content p,
+[data-theme="dark"] .warranty-description {
+    color: #cccccc;
+}
+
 /* Process Overview Section */
 .process-overview {
     padding: 6rem 0;
@@ -158,10 +201,10 @@
     letter-spacing: 0.5px;
 }
 
- .timeline-content h3 i {
-            margin-right: 10px;
-            color: #2E7D32;
-        }
+.timeline-content h3 i {
+    margin-right: 10px;
+    color: #2E7D32;
+}
 
 .timeline-content p {
     color: #000000;
@@ -289,7 +332,7 @@
 .installation-gallery {
     padding: 6rem 0;
     background: white;
-     width: 100%;
+    width: 100%;
 }
 
 .gallery-grid {
@@ -314,22 +357,22 @@
 }
 
 .gallery-image {
-            height: 220px;
-            overflow: hidden;
-            position: relative;
-        }
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+}
 
-        .gallery-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
 
-         .gallery-item:hover .gallery-image img {
-            transform: scale(1.1);
-        }
+
+.gallery-item:hover .gallery-image img {
+    transform: scale(1.1);
+}
 
 .gallery-image::before {
     content: '';
@@ -362,39 +405,39 @@
 }
 
 
- .image-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .gallery-item:hover .image-overlay {
-            opacity: 1;
-        }
-        
-        .view-more {
-            color: white;
-            background: green;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transform: translateY(20px);
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover .view-more {
-            transform: translateY(0);
-        }
-        
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-item:hover .image-overlay {
+    opacity: 1;
+}
+
+.view-more {
+    color: white;
+    background: green;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .view-more {
+    transform: translateY(0);
+}
+
 
 /* Quality Assurance Section */
 .quality-assurance {
@@ -537,7 +580,7 @@
 
 /* CTA Section */
 .cta-section {
-    background:var(--gradient-primary);
+    background: var(--gradient-primary);
     color: white;
     padding: 4rem 0;
     text-align: center;

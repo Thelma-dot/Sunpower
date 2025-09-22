@@ -396,6 +396,61 @@
     opacity: 0.9;
 }
 
+/* Dark Mode Overrides */
+[data-theme="dark"] .page-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+[data-theme="dark"] .quote-form-section,
+[data-theme="dark"] .why-choose-us,
+[data-theme="dark"] .faq-section {
+    background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+}
+
+[data-theme="dark"] .form-container,
+[data-theme="dark"] .benefit-card,
+[data-theme="dark"] .faq-item,
+[data-theme="dark"] .modal {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .3);
+}
+
+[data-theme="dark"] .form-header {
+    background: linear-gradient(135deg, #388E3C 0%, #4CAF50 100%);
+}
+
+[data-theme="dark"] .form-step h3,
+[data-theme="dark"] .benefit-card h3,
+[data-theme="dark"] .faq-question h3,
+[data-theme="dark"] .success-popup h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .form-group label,
+[data-theme="dark"] .benefit-card p,
+[data-theme="dark"] .faq-answer p,
+[data-theme="dark"] .success-popup p {
+    color: #cccccc;
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea,
+[data-theme="dark"] .form-navigation {
+    border-color: #333;
+    background: #1a1a1a;
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .faq-question {
+    background: #222;
+}
+
+[data-theme="dark"] .faq-question:hover {
+    background: #2a2a2a;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .page-header {

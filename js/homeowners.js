@@ -317,3 +317,5 @@ function submitForm(data) {
 document.addEventListener('DOMContentLoaded', function () {
     initFormValidation();
 });
+
+

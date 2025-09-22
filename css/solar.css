@@ -135,16 +135,44 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+             background: rgba(255, 255, 255, 0.1);
+             padding: 12px 20px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
         }
 
         .feature-item i {
             font-size: 2rem;
-            color: var(--primary-color);
+            color: var(--solar-green);
             margin-bottom: 10px;
         }
 
         .feature-item span {
             font-weight: 500;
+        }
+
+        .why-solar-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            animation: floatUp 1s ease-out;
+        }
+        
+        .solar-home-image {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s ease;
+        }
+        
+        .solar-home-image:hover {
+            transform: scale(1.03);
         }
 
         /* Features Section */
