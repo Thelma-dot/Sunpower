@@ -660,21 +660,18 @@ function initializeSearch() {
     }
 
     if (searchInput && searchBtn) {
-        searchBtn.addEventListener('click', function () {
+        const triggerSearch = () => {
             const searchTerm = searchInput.value.trim();
-            if (searchTerm) {
-                searchProducts(searchTerm);
-                searchContainer.classList.remove('active');
-            }
-        });
+            if (!searchTerm) return;
+            searchProducts(searchTerm);
+            searchContainer.classList.remove('active');
+        };
+
+        searchBtn.addEventListener('click', triggerSearch);
 
         searchInput.addEventListener('keypress', function (e) {
             if (e.key === 'Enter') {
-                const searchTerm = searchInput.value.trim();
-                if (searchTerm) {
-                    searchProducts(searchTerm);
-                    searchContainer.classList.remove('active');
-                }
+                triggerSearch();
             }
         });
     }
@@ -687,14 +684,9 @@ function searchProducts(term) {
         product.category.toLowerCase().includes(term.toLowerCase())
     );
 
-    if (filteredProducts.length === 0) {
-        showNotification('No products found matching your search', 'info');
-        return;
-    }
-
     // Update products grid with search results
     const productsGrid = document.getElementById('products-grid');
-    if (productsGrid) {
+    if (productsGrid && filteredProducts.length > 0) {
         productsGrid.innerHTML = filteredProducts.map(product => `
             <div class="product-card" data-product-id="${product.id}">
                 <div class="product-image">
@@ -717,9 +709,18 @@ function searchProducts(term) {
                 </div>
             </div>
         `).join('');
+        showNotification(`Found ${filteredProducts.length} product(s)`, 'success');
+        return;
     }
 
-    showNotification(`Found ${filteredProducts.length} product(s)`, 'success');
+    // If no grid is present (most pages) or no products matched, route to relevant page
+    const pagePath = getPageForQuery(term);
+    if (pagePath) {
+        window.location.href = pagePath;
+        return;
+    }
+
+    showNotification('No direct match found. Try different keywords.', 'info');
 }
 
 
@@ -983,6 +984,71 @@ window.viewProduct = viewProduct;
 window.closeModal = closeModal;
 window.openServicesPopup = openServicesPopup;
 window.closeServicesPopup = closeServicesPopup;
+
+// --- Search helpers: site-wide page routing ---
+function resolvePagePath(filename) {
+    const inPagesDir = window.location.pathname.includes('/pages/');
+    // From homepage, prefix with pages/; from subpages, use filename directly
+    return inPagesDir ? filename : `pages/${filename}`;
+}
+
+function getPageForQuery(rawTerm) {
+    const term = rawTerm.toLowerCase();
+
+    // Quick direct filename detections
+    const directMap = {
+        'homeowners': 'homeowners.html',
+        'how solar works': 'how-solar-works.html',
+        'installation': 'installation.html',
+        'better solar panels': 'better-solar-panels.html',
+        'solar battery storage': 'solar-battery-storage.html',
+        'about': 'about.html',
+        'support': 'support.html',
+        'quote': 'quote.html',
+        'privacy': 'privacy.html',
+        'terms': 'terms.html',
+        'services': 'services.html',
+        'wiring': 'wiring.html',
+        'elevator': 'lift.html',
+        'lift': 'lift.html',
+        'testing': 'testing.html',
+        'wind': 'wind.html',
+        'cctv': 'cctv.html',
+        'security': 'cctv.html',
+        'smart': 'smart.html',
+        'smart home': 'smart.html',
+        'ups': 'ups.html',
+        'avr': 'ups.html',
+        'voltage': 'voltage.html'
+    };
+
+    for (const key in directMap) {
+        if (term.includes(key)) {
+            return resolvePagePath(directMap[key]);
+        }
+    }
+
+    // Category/keyword heuristics
+    const keywordRules = [
+        { keys: ['battery', 'storage', 'lifepo4'], file: 'solar-battery-storage.html' },
+        { keys: ['panel', 'panels', 'module'], file: 'better-solar-panels.html' },
+        { keys: ['inverter', 'hybrid'], file: 'wiring.html' },
+        { keys: ['quote', 'price', 'estimate'], file: 'quote.html' },
+        { keys: ['support', 'help'], file: 'support.html' },
+        { keys: ['install', 'installation'], file: 'installation.html' },
+        { keys: ['solar'], file: 'how-solar-works.html' }
+    ];
+
+    for (const rule of keywordRules) {
+        if (rule.keys.some(k => term.includes(k))) {
+            return resolvePagePath(rule.file);
+        }
+    }
+
+    // Fallback: if we're on home already, stay; otherwise go home
+    const onHome = !window.location.pathname.includes('/pages/');
+    return onHome ? null : 'index.html';
+}
 
 
 

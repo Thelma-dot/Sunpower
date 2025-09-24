@@ -215,23 +215,8 @@ document.addEventListener('DOMContentLoaded', function () {
     animateProcessSteps();
 });
 
-// Mobile menu handling (if needed)
-function initMobileMenu() {
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function () {
-            navMenu.classList.toggle('active');
-            this.classList.toggle('active');
-        });
-    }
-}
-
-// Initialize mobile menu
-document.addEventListener('DOMContentLoaded', function () {
-    initMobileMenu();
-});
+// Mobile menu handling is managed globally in js/script.js.
+// Avoid attaching a second toggle handler here to prevent double-toggling.
 
 // Search functionality (if needed)
 function initSearch() {
