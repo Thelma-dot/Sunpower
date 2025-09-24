@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function initializeSupportPage() {
     initializeFAQ();
-    initializeSearch();
+    initializeKnowledgeSearch();
     initializeAnimations();
 }
 
@@ -32,10 +32,10 @@ function initializeFAQ() {
     });
 }
 
-// Search functionality
-function initializeSearch() {
+// Knowledge Base Search functionality (scoped to support page)
+function initializeKnowledgeSearch() {
     const searchInput = document.getElementById('knowledge-search');
-    const searchBtn = document.querySelector('.search-btn');
+    const searchBtn = document.querySelector('.knowledge-base .search-btn');
 
     if (searchInput) {
         searchInput.addEventListener('keypress', function (e) {

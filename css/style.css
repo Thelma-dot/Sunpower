@@ -1265,6 +1265,11 @@ body {
     max-width: 600px;
 }
 
+/* Home page: ensure hero paragraph text is white */
+body.home .hero p {
+    color: #ffffff !important;
+}
+
 .hero-actions {
     display: flex;
     gap: 1.5rem;
@@ -1965,6 +1970,17 @@ body {
     color: var(--solar-green);
     position: relative;
     z-index: 2;
+}
+
+/* Non-home pages: make circular icons green with white glyph */
+body:not(.home) .feature-icon {
+    background: linear-gradient(135deg, var(--solar-green) 0%, var(--solar-green-light) 100%);
+    border: none;
+    color: #ffffff;
+}
+
+body:not(.home) .feature-icon i {
+    color: #ffffff;
 }
 
 .feature-item h3 {
@@ -3278,6 +3294,30 @@ body {
 [data-theme="dark"] .dropdown-menu {
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
+}
+
+/* Global: ensure page headers show hero image and readable text on all pages except home */
+body:not(.home) .page-header .hero-image {
+    z-index: 1;
+}
+
+body:not(.home) .page-header .container {
+    position: relative;
+    z-index: 3;
+}
+
+body:not(.home) .page-header .container h1,
+body:not(.home) .page-header .container p {
+    color: #ffffff;
+    text-shadow: none;
+}
+
+[data-theme="dark"] body:not(.home) .page-header {
+    background: transparent !important;
+}
+
+[data-theme="dark"] body:not(.home) .page-header .hero-overlay {
+    background: rgba(0, 0, 0, 0.35) !important;
 }
 
 [data-theme="dark"] .dropdown-menu a {
