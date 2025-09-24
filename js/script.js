@@ -863,7 +863,7 @@ function initSlideshow() {
         dots.forEach(dot => dot.classList.remove('active'));
 
         // Add prev class to current slide before changing
-        if (slides[currentSlide]) {
+        if (index !== currentSlide && slides[currentSlide]) {
             slides[currentSlide].classList.add('prev');
         }
 
@@ -884,7 +884,7 @@ function initSlideshow() {
     }
 
     function startSlideshow() {
-        slideInterval = setInterval(nextSlide, 10000); // Change every 10 seconds
+        slideInterval = setInterval(nextSlide, 5000); // Change every 5 seconds
     }
 
     function stopSlideshow() {
