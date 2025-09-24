@@ -198,7 +198,7 @@
             productsGrid.innerHTML = filteredProducts.map(product => `
                 <div class="product-card" data-product-id="${product.id}" data-category="${product.category}">
                     <div class="product-image">
-                        <i class="fas ${product.icon || 'fa-solar-panel'}"></i>
+                        <img src="../${product.image}" alt="${product.name}" />
                         ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
                     </div>
                     <div class="product-info">
@@ -292,7 +292,10 @@
             // Update modal content
             modalTitle.textContent = product.name;
             modalDescription.textContent = product.description;
-            modalIcon.className = `fas ${product.icon || 'fa-solar-panel'}`;
+            const modalImageWrapper = modal.querySelector('.modal-image');
+            if (modalImageWrapper) {
+                modalImageWrapper.innerHTML = `<img src="../${product.image}" alt="${product.name}" style="width:100%;height:auto;object-fit:cover;"/>`;
+            }
             
             // Add specifications
             modalSpecs.innerHTML = '';
