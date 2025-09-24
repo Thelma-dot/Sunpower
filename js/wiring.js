@@ -278,11 +278,13 @@ function setupModalEvents() {
         }
     });
 
-    // Request quote button
-    requestQuoteBtn.addEventListener('click', function () {
-        alert('Quote request functionality would open a form or redirect to a contact page.');
-        closeModal();
-    });
+    // Request quote button (guard if exists)
+    if (requestQuoteBtn) {
+        requestQuoteBtn.addEventListener('click', function () {
+            alert('Quote request functionality would open a form or redirect to a contact page.');
+            closeModal();
+        });
+    }
 }
 
 function showProductDetails(productId) {

@@ -173,6 +173,71 @@
     margin: 0 auto;
 }
 
+/* Modal: show full details with internal scroll */
+.modal {
+    display: none;
+    /* toggled to flex in JS */
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #ffffff;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-body {
+    padding: 1rem 1.25rem;
+    overflow-y: auto;
+    /* scroll to see everything */
+}
+
+.modal-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+    padding: 0.75rem 1.25rem;
+    border-top: 1px solid #eee;
+}
+
+.close-modal {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+}
+
 /* Dark Mode Overrides */
 [data-theme="dark"] .page-header {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
