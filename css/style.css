@@ -302,6 +302,25 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Responsive media defaults */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent oversized images from causing layout shift */
+img,
+svg {
+    display: block;
+}
+
 /* Global Styles */
 .container {
     max-width: 1200px;
@@ -863,6 +882,27 @@ body {
 .navbar.scrolled .dark-mode-toggle {
     color: #000000;
     border-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Ensure icons stay white in dark mode, even when scrolled */
+[data-theme="dark"] .navbar .search-icon,
+[data-theme="dark"] .navbar .nav-toggle,
+[data-theme="dark"] .navbar .dark-mode-toggle {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .navbar .dark-mode-toggle {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="dark"] .navbar.scrolled .search-icon,
+[data-theme="dark"] .navbar.scrolled .nav-toggle,
+[data-theme="dark"] .navbar.scrolled .dark-mode-toggle {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .navbar.scrolled .dark-mode-toggle {
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .nav-item>.nav-link::after {
@@ -3128,6 +3168,14 @@ body:not(.home) .feature-icon i {
         padding: 2rem;
         transition: left 0.3s ease;
         z-index: 999;
+        overflow-y: auto;
+        /* Allow scrolling to see all items on small screens */
+    }
+
+    /* Reduce navbar horizontal padding on mobile for more space */
+    .navbar .container {
+        padding: 0 16px;
+        height: 64px;
     }
 
     .nav-menu.active {
@@ -3499,6 +3547,19 @@ body:not(.home) .page-header .container p {
 
     .cta-buttons .btn {
         width: 100%;
+    }
+}
+
+/* Disable parallax/fixed backgrounds on mobile/tablet for performance */
+@media (max-width: 1024px) {
+
+    .vision-section,
+    .feature-cards-section,
+    .energy-independence,
+    .about,
+    .footer,
+    .services {
+        background-attachment: scroll !important;
     }
 }
 

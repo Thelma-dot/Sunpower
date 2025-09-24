@@ -511,17 +511,19 @@ img {
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
-        top: 80px;
+        top: 70px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 80px);
-        background-color: var(--background);
+        height: calc(100vh - 70px);
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        padding-top: 40px;
-        transition: var(--transition);
+        padding: 2rem 1rem;
+        transition: left 0.3s ease;
         overflow-y: auto;
+        z-index: 999;
     }
 
     .nav-menu.active {
@@ -539,7 +541,7 @@ img {
         transform: none;
         box-shadow: none;
         margin-top: 10px;
-        display: none;
+        display: block;
     }
 
     .nav-dropdown.active .dropdown-menu {
@@ -573,6 +575,17 @@ img {
     .cta-content h2 {
         font-size: 2rem;
     }
+}
+
+/* Ensure white icons in dark mode on this page too */
+[data-theme="dark"] .navbar .search-icon,
+[data-theme="dark"] .navbar .nav-toggle,
+[data-theme="dark"] .navbar .dark-mode-toggle {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] .navbar .dark-mode-toggle {
+    border-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 @media (max-width: 576px) {
