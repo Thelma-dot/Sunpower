@@ -771,9 +771,10 @@ svg {
 }
 
 .search-container.active {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
+    display: flex !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    visibility: visible !important;
 }
 
 .search-input {
@@ -4057,9 +4058,17 @@ body:not(.home) .page-header .container p {
         position: fixed;
         top: 70px;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(-10px);
         width: 90%;
         max-width: 400px;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .search-container.active {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+        visibility: visible;
     }
 
     /* Logo text styles removed - using image only */

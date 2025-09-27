@@ -1,5 +1,37 @@
 /* About Page Styles */
 
+/* Global text styling - no shadows, black color */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000000;
+    text-shadow: none;
+}
+
+p,
+li,
+span {
+    color: #000000;
+    text-shadow: none;
+}
+
+/* Specific overrides for all sections */
+.mv-card h3,
+.mv-card p,
+.team-member h3,
+.member-title,
+.member-bio,
+.timeline-content h3,
+.timeline-content p,
+.award-card h3,
+.award-card p {
+    color: #000000 !important;
+    text-shadow: none !important;
+}
+
 .page-header {
     color: white;
     padding: 0;
@@ -69,12 +101,12 @@
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #000000;
 }
 
 .page-header p {
     font-size: 1.25rem;
-    opacity: 0.9;
+    color: #000000;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -116,13 +148,28 @@
     position: relative;
 }
 
+.story-img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 0 0 2px #000000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    max-height: 400px;
+}
+
+.story-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 0 3px #000000;
+}
+
 .image-placeholder {
     background: linear-gradient(135deg, rgba(46, 125, 50, 0.1) 0%, rgba(76, 175, 80, 0.08) 100%);
     border: 1px solid rgba(46, 125, 50, 0.2);
     border-radius: 16px;
     padding: 3rem 2rem;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 0 2px #000000;
 }
 
 .image-placeholder h3 {
@@ -154,7 +201,7 @@
     padding: 3rem 2rem;
     border-radius: 16px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px #000000;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -178,7 +225,7 @@
 
 .mv-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 3px #000000;
 }
 
 .mv-icon {
@@ -230,14 +277,14 @@
     padding: 2.5rem 2rem;
     border-radius: 16px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 2px #000000;
     transition: all 0.3s ease;
     border: 1px solid #f0f0f0;
 }
 
 .team-member:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 3px #000000;
     border-color: #2E7D32;
 }
 
@@ -251,7 +298,7 @@
     justify-content: center;
     margin: 0 auto 2rem;
     border: 3px solid #e6f2e8;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 0 2px #000000;
     transition: transform 0.3s ease;
 }
 
@@ -337,7 +384,7 @@
     border-radius: 16px;
     text-align: center;
     border: 1px solid #eef2f3;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 0 2px #000000;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -361,7 +408,7 @@
 
 .feature-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 0 3px #000000;
 }
 
 .feature-icon {
@@ -385,14 +432,16 @@
 .feature-card h3 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #111111;
+    color: #000000;
     margin-bottom: 1rem;
+    text-shadow: none;
 }
 
 .feature-card p {
-    color: #333333;
+    color: #000000;
     line-height: 1.6;
     font-size: 1rem;
+    text-shadow: none;
 }
 
 /* CTA Section */
@@ -426,7 +475,7 @@
 
 .cta-content .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(46, 125, 50, 0.4);
+    box-shadow: 0 0 0 2px #000000;
 }
 
 /* Timeline */
@@ -472,7 +521,7 @@
     border: 1px solid #eef2f3;
     border-radius: 12px;
     padding: 1.25rem 1.5rem;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 0 2px #000000;
 }
 
 .timeline-content h3 {
@@ -505,13 +554,13 @@
     border-radius: 16px;
     padding: 2rem;
     text-align: center;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 0 2px #000000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .award-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 3px #000000;
 }
 
 .award-icon {
@@ -525,7 +574,7 @@
     align-items: center;
     justify-content: center;
     font-size: 1.75rem;
-    box-shadow: 0 6px 18px rgba(46, 125, 50, 0.3);
+    box-shadow: 0 0 0 2px #000000;
 }
 
 .award-card h3 {
@@ -566,7 +615,7 @@
 [data-theme="dark"] .timeline-content {
     background: #1f1f1f;
     border-color: #333;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 2px #000000;
 }
 
 [data-theme="dark"] .timeline-content h3 {
@@ -584,7 +633,7 @@
 [data-theme="dark"] .award-card {
     background: #1f1f1f;
     border-color: #333;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 2px #000000;
 }
 
 [data-theme="dark"] .award-card h3 {
@@ -667,12 +716,11 @@
 }
 
 [data-theme="dark"] .hero-content h1 {
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    color: #000000;
 }
 
 [data-theme="dark"] .hero-content p {
-    color: #b0b0b0;
+    color: #000000;
 }
 
 [data-theme="dark"] .hero-overlay {
@@ -687,13 +735,13 @@
 [data-theme="dark"] .mv-card {
     background: rgba(30, 30, 30, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 2px #000000;
 }
 
 [data-theme="dark"] .mv-card:hover {
     background: rgba(40, 40, 40, 0.9);
     border-color: rgba(76, 175, 80, 0.3);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 3px #000000;
 }
 
 [data-theme="dark"] .mv-card h3 {
@@ -716,13 +764,13 @@
 [data-theme="dark"] .team-member {
     background: rgba(30, 30, 30, 0.8);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 2px #000000;
 }
 
 [data-theme="dark"] .team-member:hover {
     background: rgba(40, 40, 40, 0.9);
     border-color: rgba(76, 175, 80, 0.3);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 0 3px #000000;
 }
 
 [data-theme="dark"] .team-member h3 {
@@ -739,7 +787,7 @@
 
 [data-theme="dark"] .member-avatar {
     border-color: rgba(76, 175, 80, 0.35);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 0 2px #000000;
 }
 
 /* Stats Section Dark Mode */
@@ -763,13 +811,13 @@
 [data-theme="dark"] .feature-card {
     background: #1f1f1f;
     border: 1px solid #333;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0 2px #000000;
 }
 
 [data-theme="dark"] .feature-card:hover {
     background: #262626;
     border-color: rgba(76, 175, 80, 0.35);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 0 3px #000000;
 }
 
 [data-theme="dark"] .feature-card h3 {
@@ -786,7 +834,7 @@
 
 [data-theme="dark"] .feature-icon {
     background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
-    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    box-shadow: 0 0 0 2px #000000;
 }
 
 /* CTA Section Dark Mode */
@@ -812,16 +860,27 @@
 [data-theme="dark"] .cta-content .btn:hover {
     background: rgba(255, 255, 255, 0.3);
     border-color: rgba(255, 255, 255, 0.5);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 2px #000000;
+}
+
+/* Section header styling */
+.section-header h2 {
+    color: #000000;
+    text-shadow: none;
+}
+
+.section-header p {
+    color: #000000;
+    text-shadow: none;
 }
 
 /* Additional dark mode enhancements for better contrast */
 [data-theme="dark"] .section-header h2 {
-    color: #ffffff;
+    color: #000000;
 }
 
 [data-theme="dark"] .section-header p {
-    color: #b0b0b0;
+    color: #000000;
 }
 
 [data-theme="dark"] .container {
@@ -840,6 +899,28 @@
     filter: brightness(0.6) contrast(1.1);
 }
 
+[data-theme="dark"] .story-img {
+    box-shadow: 0 0 0 2px #000000;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+[data-theme="dark"] .story-img:hover {
+    box-shadow: 0 0 0 3px #000000;
+    filter: brightness(1) contrast(1.2);
+}
+
+[data-theme="dark"] .story-text h2 {
+    color: #000000;
+}
+
+[data-theme="dark"] .story-text .lead {
+    color: #000000;
+}
+
+[data-theme="dark"] .story-text p {
+    color: #000000;
+}
+
 /* Ensure text remains readable in dark mode */
 [data-theme="dark"] h1,
 [data-theme="dark"] h2,
@@ -847,13 +928,13 @@
 [data-theme="dark"] h4,
 [data-theme="dark"] h5,
 [data-theme="dark"] h6 {
-    color: #ffffff;
+    color: #000000;
 }
 
 [data-theme="dark"] p,
 [data-theme="dark"] li,
 [data-theme="dark"] span {
-    color: #b0b0b0;
+    color: #000000;
 }
 
 /* Dark mode button enhancements */
@@ -867,7 +948,7 @@
 
 [data-theme="dark"] .btn-primary:hover {
     background: linear-gradient(135deg, #66BB6A 0%, #81C784 100%);
-    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+    box-shadow: 0 0 0 2px #000000;
 }
 
 /* Responsive dark mode adjustments */

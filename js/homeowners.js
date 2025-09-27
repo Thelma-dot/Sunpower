@@ -23,6 +23,12 @@ function initHomeownersPage() {
 
     // Initialize CTA tracking
     initCTATracking();
+
+    // Initialize search functionality
+    // Search functionality is handled globally in script.js
+
+    // Initialize form validation
+    initFormValidation();
 }
 
 // Smooth scrolling for internal links
@@ -218,54 +224,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Mobile menu handling is managed globally in js/script.js.
 // Avoid attaching a second toggle handler here to prevent double-toggling.
 
-// Search functionality (if needed)
-function initSearch() {
-    const searchIcon = document.getElementById('search-icon');
-    const searchContainer = document.getElementById('search-container');
-    const searchInput = document.getElementById('search-input');
-    const searchBtn = document.getElementById('search-btn');
-
-    if (searchIcon && searchContainer) {
-        searchIcon.addEventListener('click', function () {
-            searchContainer.classList.toggle('active');
-            if (searchContainer.classList.contains('active')) {
-                searchInput.focus();
-            }
-        });
-    }
-
-    if (searchBtn && searchInput) {
-        searchBtn.addEventListener('click', function () {
-            const query = searchInput.value.trim();
-            if (query) {
-                performSearch(query);
-            }
-        });
-
-        searchInput.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                const query = this.value.trim();
-                if (query) {
-                    performSearch(query);
-                }
-            }
-        });
-    }
-}
-
-// Perform search
-function performSearch(query) {
-    // This would integrate with your search functionality
-    console.log('Searching for:', query);
-
-    // For now, redirect to products page with search query
-    window.location.href = `products.html?search=${encodeURIComponent(query)}`;
-}
-
-// Initialize search
-document.addEventListener('DOMContentLoaded', function () {
-    initSearch();
-});
+// Search functionality is handled globally in script.js
 
 // Form validation (if there are forms on the page)
 function initFormValidation() {
@@ -297,10 +256,5 @@ function submitForm(data) {
     // Add your form submission logic here
     console.log('Form submitted:', data);
 }
-
-// Initialize form validation
-document.addEventListener('DOMContentLoaded', function () {
-    initFormValidation();
-});
 
 
